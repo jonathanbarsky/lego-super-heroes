@@ -35,13 +35,13 @@
                 <div></div>
             </section>
             <section class="footer">
-                <div>
+                <div id="button1">
                     <img src="" alt="">
                 </div>
-                <div>
+                <div id="button2">
                     <img src="" alt="">
                 </div>
-                <div>
+                <div id="button3">
                     <img src="" alt="">
                 </div>
             </section>
@@ -53,7 +53,31 @@
             <div></div>
         </section>
             <!-- Modal -->
-        <section></section>
+        <section class="modal hidden">
+            <div class="modal_content">
+                <img class="modal_content-close" src="https://img.icon8.com/windows/32/000000/macos-close.png" alt="">
+
+                <div class="modal_content-slider">
+                    <input type="radio" name="slider-1" id="radio-1" checked>
+                    <input type="radio" name="slider-1" id="radio-2" >
+                    <input type="radio" name="slider-1" id="radio-3" >
+
+                    <div class="cards">
+                        <label for="radio-1" id="card-1" class="card">
+                            <img src="" alt="">
+                        </label>
+                        <label for="radio-2" id="card-2" class="card">
+                            <img src="" alt="">
+                        </label>
+                        <label for="radio-3" id="card-3" class="card">
+                            <img src="" alt="">
+                        </label>
+                    </div>
+                </div>
+                <button class="modal_content-button">Lo quiero!</button>
+            </div>
+        </section>
     </div>
+    <script src="./src/index.js"></script>
 </body>
 </html>

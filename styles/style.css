@@ -5,16 +5,17 @@
 }
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
    
 }
 html{
     font-size: 62.5%;
 }
 body{
+    width: 100vw;
     height: 100vh;
     overflow: hidden;
-    margin: o;
-    padding: 0;
 }
 .page{
     position: relative;
@@ -43,8 +44,9 @@ body{
     align-items: center;
     width: 100%;
     padding: 0 0 0 80px;
+    transform: translateY(-200px);
     /* duracion, nombre, delay, velocidad  */
-    animation: 2s navbar 0.2s ease-in-out;
+    animation: 2s navbar 2s ease-in-out forwards;
 }
 @keyframes navbar{
     0%{
@@ -80,7 +82,8 @@ body{
     grid-area: section;
     justify-content: center;
     padding-left: 80px;
-    animation: 2s main-content 0.2s ease-in-out;
+    transform: translateY(-600px);
+    animation: 2s main-content 2s ease-in-out forwards;
 }
 .main-content p:first-child{
     font-size: 3.6rem;
@@ -138,7 +141,8 @@ body{
     grid-column: 2 / 6 ;
     grid-row: 1 / 2;
     z-index: 2;
-    animation: 2s superman 0.2s ease-in-out;
+    transform: translateX(600px);
+    animation: 2s superman 2s ease-in-out forwards;
 }
 @keyframes superman{
     0%{
@@ -165,7 +169,7 @@ body{
     transform: translateY(100%);
     animation-name: footer;
     animation-duration: 0.5s;
-    animation-delay: 2.5s;
+    animation-delay: 2s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
@@ -221,7 +225,7 @@ body{
     position: absolute;
     z-index: 3;
 
-    animation: loader 0.2s linear forwards; /*fordward hace que se quede en su etapa final*/
+    animation: loader 2s linear forwards; /*fordward hace que se quede en su etapa final*/
 }
 @keyframes loader{
     0%{
@@ -265,4 +269,97 @@ body{
     50%{
         transform: scale(1);
     }
+}
+
+.modal{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 4;
+
+    display: grid;
+    place-items: center;
+}
+.modal_content{
+    background: white;
+    width: 50%;
+    height: auto;
+    display: grid;
+    place-items: center;
+}
+.modal_content > img{
+    width: 50px;
+    height: 50px;
+    justify-self: end;
+}
+.modal_content img:hover{
+    cursor: pointer;
+}
+.modal_content-slider{
+    width: 300px;
+    height: 200px;
+    transform-style: preserve-3d;
+}
+.modal_content-slider input{
+    display: none;
+}
+.cards{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.card{
+    background: var(--yellow);
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    width: 50%;
+    height: 100%;
+}
+#radio-1:checked ~ .cards #card-1,
+#radio-2:checked ~ .cards #card-2,
+#radio-3:checked ~ .cards #card-3{
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+#radio-1:checked ~ .cards #card-2,
+#radio-2:checked ~ .cards #card-3,
+#radio-3:checked ~ .cards #card-1{
+    transform: translateX(40%) scale(0.8);
+    opacity: 0.5;
+    z-index: 0;
+}
+#radio-1:checked ~ .cards #card-3,
+#radio-2:checked ~ .cards #card-1,
+#radio-3:checked ~ .cards #card-2{
+    transform: translateX(-40%) scale(0.8);
+    opacity: 0.5;
+    z-index: 0;
+}
+.modal_content-button{
+    background: var(--red);
+    color: white;
+    width: 120px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    border: 1px solid var(--red);
+    margin: 10px auto;
+}
+.modal_content-button:hover{
+    cursor: pointer;
+}
+.visible{
+    display: grid;
+}
+.hidden{
+    display: none;
 }
