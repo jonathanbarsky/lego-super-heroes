@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/note.css">
+    <link rel="stylesheet" href="./styles/note.css" media="(min-width: 760px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">    <title>Lego Super Heroes</title>
@@ -40,18 +40,18 @@
                 <div></div>
             </section>
             <section class="footer">
-                <button id="button1">
+                <button id="button1" class="footer_button">
                     <picture>
                         <source media="(min-width: 760px)" srcset="./src/images/spiderman.png">
                         <img class="onViewPort invisible" src="./src/images/spiderman.png" alt="spiderman">
                     </picture>
                 </button>
-                <button id="button2">
+                <button id="button2" class="footer_button">
                     <picture>
                         <img class="onViewPort invisible" src="./src/images/robin.png" alt="robin">
                     </picture>
                 </button>
-                <button id="button3">
+                <button id="button3" class="footer_button">
                     <picture>
                         <img class="onViewPort invisible" src="https://i.ibb.co/M18p91c/batman.webp" alt="batman">
                     </picture>
@@ -89,6 +89,6 @@
             </div>
         </section>
     </div>
-    <script src="./src/index.js"></script>
+    <script type="module" src="./src/index.js"></script>
 </body>
 </html>
