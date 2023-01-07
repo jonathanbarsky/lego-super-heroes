@@ -298,10 +298,10 @@ body{
     height: auto;
     max-width: 380px;
     /* max-height: 350px; */
-    box-shadow: 0 0 25px var(--blue);
     border-radius: 15px;
     display: grid;
     place-items: center;
+    position: relative;
 }
 .modal_content > img{
     width: 50px;
