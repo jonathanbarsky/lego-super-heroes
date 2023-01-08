@@ -1,3 +1,4 @@
+@media(min-width: 760px){
     body{
         overflow: hidden;
     }
@@ -89,12 +90,8 @@
         border-radius: 0 40px 0 0;
     }
     .footer button{
-        background: var(--blue);
         width: 130px;
         height: 50%;
-        border-radius: 20px 20px 0 0;
-        display: flex;
-        justify-content: center;
         transform: translateY(400px);
         animation: 1s footer-button 2.5s ease-in-out forwards;
     }
@@ -143,3 +140,12 @@
             transform: translateY(0px);
         }
     }
+    @keyframes footer-button{
+        0%{
+            transform: translateY(400px);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+    }
+}

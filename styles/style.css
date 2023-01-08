@@ -133,7 +133,7 @@ body{
     height: 80vw;
     max-height: 400px;
     z-index: 2;
-    transform: translateX(600px);
+    transform: translateY(600px);
     animation: 2s superman 2s ease-in-out forwards;
 }
 .aside-content img{
@@ -151,7 +151,7 @@ body{
         transform: translateY(10px);
     }
     100%{
-        transform: translateX(0px);
+        transform: translateY(0px);
         filter: drop-shadow(0px 0px 20px var(--blue));
     }
 }
@@ -193,22 +193,16 @@ body{
     border-radius: 20px 20px 0 0;
     display: flex;
     justify-content: center;
-    transform: translateY(400px);
+    transform: translateY(100px);
     animation: 1s footer-button 2.5s ease-in-out forwards;
 }
 @keyframes footer-button{
     0%{
-        transform: translateY(400px);
+        transform: translateY(100px);
     }
     100%{
         transform: translateY(0px);
     }
-}
-.footer button:hover > img,
-.footer button:hover picture{
-    cursor: pointer;
-    transform: translateY(-20px) scale(1.1);
-    transition: transform 0.3s ease-in-out;
 }
 .footer button > img,
 .footer button picture{
@@ -222,6 +216,12 @@ body{
     bottom: 30px;
     transform: translateY(0px) scale(1); /*poniendo esto es como reacionaria cuando deje de hacer hover al div, si no ponemos esatas propiedades la forma de retornar va a ser muy brusca y poco agradable */
     transition: transform 0.5s ease-in-out;
+}
+.footer button:hover > img,
+.footer button:hover picture{
+    cursor: pointer;
+    transform: translateY(-20px) scale(1.1);
+    transition: transform 0.3s ease-in-out;
 }
 .footer button picture > img{
     width: 100%;
