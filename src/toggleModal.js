@@ -1,8 +1,6 @@
 const modal = document.querySelector(".modal");
 
 function openModal(){
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
     modal.classList.remove("hidden");
     modal.classList.add("visible");
     modal.classList.add("appear");
